@@ -2,7 +2,7 @@
 import "./style.css";
 import circleIcon from "../assets/circle.png";
 import crossIcon from "../assets/cross.png";
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react';
 
 let data = ["","","","","","","","",""];
 
@@ -44,7 +44,7 @@ const TicTacToe = () => {
     }
 
     function check(a,b,c){
-        return a==b && c==a;
+        return a===b && c===a;
     }
 
     const checkWin = () => {
@@ -92,7 +92,7 @@ const TicTacToe = () => {
         data = ["","","","","","","","",""];
         titleRef.current.innerHTML =" Tic Tac Toe Game In <span>React</span> ";
 
-        boxes.map( (box) => {
+        boxes.forEach( (box) => {
             box.current.innerHTML = "";
         })
     }
